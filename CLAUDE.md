@@ -2,7 +2,7 @@
 
 Este repositorio es el sitio web de Novix: HTML, CSS y JavaScript estáticos, sin build ni dependencias. Se publica solo, con GitHub Pages, cada vez que llega un cambio a la rama `main` de `origin` (https://github.com/novix-sa/novix-web).
 
-- Sitio publicado: https://novix-sa.github.io/novix-web/ (cuando se active el dominio propio será https://newsite.novix.com). La URL vigente siempre la da `gh api repos/novix-sa/novix-web/pages --jq .html_url`.
+- Sitio publicado: https://newsite.novix.com (la dirección de GitHub, https://novix-sa.github.io/novix-web/, redirige ahí). La URL vigente siempre la da `gh api repos/novix-sa/novix-web/pages --jq .html_url`.
 
 ## Con quién trabajás
 
@@ -33,7 +33,7 @@ git pull --rebase --autostash origin main
 
 Reglas del sitio:
 
-- Rutas siempre relativas (`assets/img/logo.svg`, `../index.html`), nunca empezando con `/`: el sitio tiene que funcionar tanto en `novix-sa.github.io/novix-web/` como en el dominio propio.
+- Rutas siempre relativas (`assets/img/logo.svg`, `../index.html`), nunca empezando con `/`: el sitio tiene que funcionar igual en cualquier dirección donde se publique (hoy newsite.novix.com, más adelante novix.com).
 - Nombres de archivos y carpetas en minúsculas, sin espacios ni acentos (`quienes-somos.html`).
 - Páginas `.html` en la raíz; estilos en `assets/css/`, scripts en `assets/js/`, imágenes en `assets/img/`.
 - Imágenes optimizadas para web (idealmente menos de 500 KB cada una). Ningún archivo de más de 50 MB (GitHub rechaza los de más de 100 MB).
