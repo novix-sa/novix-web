@@ -2,7 +2,7 @@
 
 Sitio web de Novix (HTML estático), publicado con GitHub Pages desde la rama `main`.
 
-- Sitio: https://novix-sa.github.io/novix-web/ (más adelante, https://newsite.novix.com)
+- Sitio: https://newsite.novix.com
 - Se edita con Claude, en la pestaña **Code** de la app de escritorio. Claude trae lo último del equipo, muestra los cambios en su navegador y, si le decís que sí, los publica. Las instrucciones que sigue están en [CLAUDE.md](CLAUDE.md).
 
 ## Empezar (una sola vez)
