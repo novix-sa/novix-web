@@ -752,6 +752,16 @@ if(NOVIX_TRACK&&typeof trackerCode==='undefined'){
   .lang button{border-color:var(--line);color:var(--gray);}
   .lang button[aria-pressed="true"]{background:var(--ink);color:var(--white);border-color:var(--ink);}
   .burger{border-color:var(--line);color:var(--ink);}
+  /* ---------- testimonios (inicio) ---------- */
+  .sec-sub{margin-top:14px;max-width:560px;color:var(--gray);font-size:15px;}
+  .testi-label{display:block;margin:64px 0 18px;}
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .quote{margin:0;background:var(--white);border:1px solid var(--line);border-left:2px solid var(--navy);padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:30px;}
+  .quote p{font-size:clamp(19px,1.6vw,23px);font-weight:300;line-height:1.45;letter-spacing:-.01em;color:var(--ink);}
+  .quote .who{color:var(--ink);font-size:14px;border-top:1px solid var(--line);padding-top:16px;}
+  .quote .who strong{display:block;font-weight:600;}
+  .quote .who span{color:var(--gray);}
+  @media (max-width:720px){.quotes{grid-template-columns:1fr;}.quote{padding:26px;}}
   /* ---------- tipografía (guía Novix) ---------- */
   /* El formulario de Clientify agrega body{font-family:Poppins !important;color:#525252;font-size:14px}: lo anulamos. */
   html body{font-family:'Inter',Helvetica,Arial,sans-serif !important;color:var(--ink);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
@@ -897,7 +907,7 @@ if(NOVIX_TRACK&&typeof trackerCode==='undefined'){
       <a href="manufactura.html" class="cell photo rv">
         <div class="top"><span class="idx" style="color:var(--white);border-color:rgba(255,255,255,.4)">01</span></div>
         <div>
-          <h3>Manufacturing</h3>
+          <h3>Manufactura</h3>
           <p style="margin-top:10px">Soluciones tecnológicas integradas y escalables a lo largo de toda la cadena de valor.</p>
         </div>
         <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
@@ -913,32 +923,32 @@ if(NOVIX_TRACK&&typeof trackerCode==='undefined'){
       <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
       </a>
       <a href="energia.html" class="cell rv">
-        <div class="top"><h3>Energy</h3><span class="idx">04</span></div>
+        <div class="top"><h3>Energía</h3><span class="idx">04</span></div>
         <p>Herramientas que integran todas las variables clave del negocio energético.</p>
       <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
       </a>
       <a href="transporte-infraestructura.html" class="cell blue rv">
-        <div class="top"><h3>Transportation &amp; Infrastructure</h3><span class="idx">05</span></div>
+        <div class="top"><h3>Transporte e Infraestructura</h3><span class="idx">05</span></div>
         <p>Proyección de demanda, costos, tiempos y confiabilidad del servicio en todos los modos de transporte.</p>
       <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
       </a>
       <a href="educacion.html" class="cell rv">
-        <div class="top"><h3>Education</h3><span class="idx">06</span></div>
+        <div class="top"><h3>Educación</h3><span class="idx">06</span></div>
         <p>Planificación eficiente de recursos estratégicos y camino acelerado a la Transformación Digital.</p>
       <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
       </a>
       <a href="salud.html" class="cell rv">
-        <div class="top"><h3>Health</h3><span class="idx">07</span></div>
+        <div class="top"><h3>Salud</h3><span class="idx">07</span></div>
         <p>Rentabilidad sostenida administrando recursos escasos en un contexto de costos crecientes.</p>
       <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
       </a>
       <a href="servicios-financieros.html" class="cell dark rv">
-        <div class="top"><h3>Financial Services</h3><span class="idx">08</span></div>
+        <div class="top"><h3>Servicios Financieros</h3><span class="idx">08</span></div>
         <p>Eficiencia y procesos modernos para brindar servicios de mayor valor a sus clientes.</p>
       <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
       </a>
       <a href="telecomunicaciones.html" class="cell rv">
-        <div class="top"><h3>Telecommunications</h3><span class="idx">09</span></div>
+        <div class="top"><h3>Telecomunicaciones</h3><span class="idx">09</span></div>
         <p>Tecnologías de última generación para nuevas formas de comunicación, trabajo y entretenimiento.</p>
       <span class="go" aria-hidden="true"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
       </a>
@@ -952,6 +962,7 @@ if(NOVIX_TRACK&&typeof trackerCode==='undefined'){
       <div>
         <span class="label">Casos de éxito</span>
         <h2 class="h-lg">Historias destacadas</h2>
+        <p class="sec-sub">Desarrollamos proyectos para grandes empresas en Latinoamérica, aportando todo el know how y experiencia de nuestro equipo de profesionales.</p>
       </div>
       <a class="btn btn-line" href="historias-de-clientes.html">Ver todas las historias
         <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
@@ -973,6 +984,17 @@ if(NOVIX_TRACK&&typeof trackerCode==='undefined'){
         <div class="case-img" style="background-image:url('assets/img/historias/naturgy.jpg')"></div>
         <div class="case-foot"><span>Ver historia completa</span><span class="arrow"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11 11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></div>
       </a>
+    </div>
+    <span class="label testi-label">Testimonios</span>
+    <div class="quotes">
+      <blockquote class="quote rv">
+        <p>“La innovación es un componente fundamental en nuestra área de Cumplimiento. El nuevo dashboard de monitoreo nos permite priorizar y gestionar las alertas en tiempos nunca antes vistos.”</p>
+        <div class="who"><strong>Augusto Arosemena</strong><span>VP Senior de Cumplimiento en Global Bank</span></div>
+      </blockquote>
+      <blockquote class="quote rv">
+        <p>“La implementación de esta herramienta nos permitió mejorar la atención al cliente y consumidor, abasteciendo correctamente todos los puntos logísticos. Además, pasamos de un proceso manual, que llevaba mucho tiempo, a un proceso automatizado. El desarrollo implementado por NOVIX nos permitió entender lo que nos decían los datos y, como resultado, tomar mejores decisiones.”</p>
+        <div class="who"><strong>Brunno Ragonha</strong><span>Demand &amp; Supply Planning Executive Manager, Nestlé</span></div>
+      </blockquote>
     </div>
   </div>
 </section>
