@@ -735,6 +735,13 @@
   .lang button{border-color:var(--line);color:var(--gray);}
   .lang button[aria-pressed="true"]{background:var(--ink);color:var(--white);border-color:var(--ink);}
   .burger{border-color:var(--line);color:var(--ink);}
+  /* ---------- tipografía (guía Novix) ---------- */
+  /* El formulario de Clientify agrega body{font-family:Poppins !important;color:#525252;font-size:14px}: lo anulamos. */
+  html body{font-family:'Inter',Helvetica,Arial,sans-serif !important;color:var(--ink);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  em,i{font-style:normal;}
+  .lang button{letter-spacing:.06em;}
+  .contact.page h1{font-size:clamp(44px,6vw,88px);line-height:1;letter-spacing:-.04em;}
+  .contact-body > p{font-size:16.5px;}
 </style>
 </head>
 <body>
@@ -744,7 +751,6 @@
     <a href="index.html" class="logo"><img src="assets/img/logo-novix-azul.png" alt="Novix — inicio"></a>
     <nav aria-label="Principal">
       <ul class="menu">
-        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li class="has-sub">
           <button type="button" aria-expanded="false" aria-controls="sub-ind">Industrias <svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
