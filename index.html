@@ -8,6 +8,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Analytics y Clientify: solo en el sitio publicado (no en la vista previa local) -->
+<script>
+var NOVIX_TRACK=!/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)&&location.protocol!=='file:';
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+if(NOVIX_TRACK){var g=document.createElement('script');g.async=1;g.src='https://www.googletagmanager.com/gtag/js?id=G-7DR2VVSBJP';document.head.appendChild(g);gtag('js',new Date());gtag('config','G-7DR2VVSBJP');}
+</script>
+<script>
+if(NOVIX_TRACK&&typeof trackerCode==='undefined'){
+  (function(d,w,u,o){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var a=d.createElement('script'),m=d.getElementsByTagName('script')[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m);})(document,window,'https://analytics.clientify.net/tracker.js','ana');
+  ana('setTrackerUrl','https://analytics.clientify.net');
+  ana('setTrackingCode','CF-17491-17491-369HY');
+  ana('trackPageview');
+}
+</script>
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <script src="assets/js/i18n-data.js"></script>
 <script src="assets/js/i18n.js"></script>
 <style>
