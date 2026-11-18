@@ -7,7 +7,7 @@
    - Novix no usa el Pixel de Meta: se bloquea la copia que intenta cargar el formulario de Clientify.
    - En la vista previa local (localhost) no se envía nada a ningún servicio. */
 (function () {
-  var GA4_ID = 'G-7DR2VVSBJP';
+  var GA4_ID = 'G-5WBGN57CX6';   // propiedad de Analytics de Novix (flujo "Novix", https://novix.com)
   var CLIENTIFY_CODE = 'CF-17491-17491-369HY';
   var FORMS = { es: '296635', en: '296644', pt: '296642' };
   var KEY = 'novix-cookies';         // 'aceptadas' | 'rechazadas'
