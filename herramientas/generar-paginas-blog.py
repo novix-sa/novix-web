@@ -48,7 +48,9 @@ def main():
     # borrar páginas de artículos que ya no existen
     for d in os.listdir(carpeta):
         ruta = os.path.join(carpeta, d)
-        if os.path.isdir(ruta) and d not in slugs and os.path.exists(os.path.join(ruta, 'index.html')):
+        indice = os.path.join(ruta, 'index.html')
+        if (os.path.isdir(ruta) and d not in slugs and os.path.exists(indice)
+                and 'generar-paginas-blog.py' in open(indice, encoding='utf-8').read(2000)):
             shutil.rmtree(ruta)
             print('borrada', d)
     print('páginas generadas:', len(slugs))

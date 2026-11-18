@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- GitHub Pages muestra esta página cuando una dirección no existe. Puede mostrarse en cualquier carpeta,
+     por eso usa <base href="/">. Antes de mostrar el aviso, intenta llevar a la página que corresponde
+     (direcciones viejas del WordPress de novix.com). -->
+<base href="/">
+<title>Página no encontrada — Novix</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<script>
+(function () {
+  var p = location.pathname.toLowerCase().replace(/^\/+|\/+$/g, '');
+  var seg = p.split('/');
+  var lang = (seg[0] === 'en' || seg[0] === 'pt') ? seg[0] : '';
+  var q = new URLSearchParams(location.search).get('lang');
+  if (q === 'en' || q === 'pt') lang = q;
+  window.NOVIX_404_LANG = lang || 'es';
+  var reglas = [
+    [/historias|customer|clientes|stories|casos|cases|case-stud/, 'historias-de-clientes.html'],
+    [/servicios-financieros|financial|financier|banca|banking/, 'servicios-financieros.html'],
+    [/servicio|services|servicos|serviços/, 'servicios.html'],
+    [/manufactur/, 'manufactura.html'],
+    [/retail|varejo/, 'retail.html'],
+    [/utilities/, 'utilities.html'],
+    [/energ/, 'energia.html'],
+    [/transport|infraestru|infrastru/, 'transporte-infraestructura.html'],
+    [/educa/, 'educacion.html'],
+    [/salud|health|saude|saúde/, 'salud.html'],
+    [/telecom/, 'telecomunicaciones.html'],
+    [/contact|contato/, 'contacto.html'],
+    [/blog|news|novedades|noticias/, 'blog.html']
+  ];
+  var destino = null;
+  for (var i = 0; i < reglas.length; i++) if (reglas[i][0].test(p)) { destino = reglas[i][1]; break; }
+  if (!destino && lang && seg.length === 1) destino = 'index.html';
+  if (destino) location.replace(destino + (lang ? '?lang=' + lang : ''));
+})();
+</script>
+<style>
+  :root{--navy:#005B9D;--ink:#1D1D1B;--gray:#5F6062;--line:#DCDDDF;--paper:#FAFAFA;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
+  header{background:#fff;box-shadow:0 1px 0 var(--line);padding:24px 16px;}
+  header a{display:block;max-width:1200px;margin:0 auto;}
+  header img{height:24px;width:auto;display:block;}
+  main{flex:1;display:flex;align-items:center;padding:64px 16px;}
+  .in{max-width:1200px;margin:0 auto;width:100%;}
+  .label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);}
+  h1{font-size:clamp(44px,6vw,88px);font-weight:300;line-height:1;letter-spacing:-.04em;margin:18px 0 22px;}
+  p{font-size:16px;color:var(--gray);max-width:560px;}
+  a.btn{display:inline-flex;margin-top:32px;padding:15px 24px;background:var(--navy);color:#fff;font-size:14px;font-weight:600;letter-spacing:.02em;text-decoration:none;}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><a href="index.html"><img src="assets/img/logo-novix-azul.png" alt="Novix — inicio"></a></header>
+<main>
+  <div class="in">
+    <span class="label" id="t-label">Error 404</span>
+    <h1 id="t-title">No encontramos esta página</h1>
+    <p id="t-text">Es posible que la dirección haya cambiado con el nuevo sitio de Novix.</p>
+    <a class="btn" id="t-btn" href="index.html">Ir al inicio</a>
+  </div>
+</main>
+<script>
+(function () {
+  var T = {
+    en: ['Page not found', 'The address may have changed with the new Novix website.', 'Go to the home page', 'Page not found — Novix'],
+    pt: ['Não encontramos esta página', 'O endereço pode ter mudado com o novo site da Novix.', 'Ir para o início', 'Página não encontrada — Novix']
+  }[window.NOVIX_404_LANG];
+  if (!T) return;
+  document.documentElement.lang = window.NOVIX_404_LANG;
+  document.getElementById('t-title').textContent = T[0];
+  document.getElementById('t-text').textContent = T[1];
+  var b = document.getElementById('t-btn'); b.textContent = T[2]; b.href = 'index.html?lang=' + window.NOVIX_404_LANG;
+  document.title = T[3];
+})();
+</script>
+</body>
+</html>
