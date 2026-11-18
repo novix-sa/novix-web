@@ -39,6 +39,14 @@ Reglas del sitio:
 - Imágenes optimizadas para web (idealmente menos de 500 KB cada una). Ningún archivo de más de 50 MB (GitHub rechaza los de más de 100 MB).
 - El repositorio es público: todo lo que se publica, historial incluido, lo puede ver cualquiera. Nunca guardes contraseñas, claves, datos de clientes ni borradores confidenciales.
 - No modifiques `CLAUDE.md`, `.claude/`, `CNAME` ni `.nojekyll` salvo que la persona lo pida explícitamente.
+- No borres `googlef056f13c407c45a5.html`: es la verificación de Google Search Console.
+
+Partes que dependen de otras (revisalas cada vez que toques algo relacionado; las herramientas se corren con `python3` desde la raíz del repositorio):
+
+- **Idiomas (ES/EN/PT).** El sitio se escribe en español y `assets/js/i18n.js` lo traduce con `assets/js/i18n-data.js`, donde cada traducción está guardada bajo el texto exacto en español. Si cambiás o agregás un texto en español, actualizá también su clave y sus traducciones en `en` y `pt` (si no, ese texto queda en español en los otros idiomas). Los artículos del blog tienen sus versiones `es`/`en`/`pt` dentro de los datos del blog (`window.NOVIX_BLOG`, iguales en `blog.html` y `articulo.html`).
+- **Artículos del blog.** Cada artículo tiene su página en `blog/<artículo>/index.html`, generada a partir de `articulo.html`. Después de cambiar `articulo.html` o los artículos, corré `python3 herramientas/generar-paginas-blog.py`. No edites esas páginas a mano.
+- **Direcciones viejas, sitemap y robots.** Las carpetas de redirección (`servicios/`, `en/blog/...`, etc.), `sitemap.xml` y `robots.txt` se generan con `python3 herramientas/generar-redirecciones.py`. Correlo cuando se agrega o se quita una página o un artículo (y sumá la página nueva a la lista `PAGINAS` de esa herramienta). `404.html` muestra el aviso de "no encontrada" e intenta redirigir lo que no está en la lista.
+- **Medición y cookies.** Google Analytics, el seguimiento de Clientify, el aviso de cookies y el evento `generate_lead` del formulario están en `assets/js/medicion.js`. GA4 solo se activa si la persona acepta las cookies; en la vista previa local no se envía nada.
 
 ## 3. Publicar
 
